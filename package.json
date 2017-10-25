@@ -4,8 +4,9 @@
   "description": "server for 2048 game",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "commitmsg": "commitlint -e"
+    "test": "gulp test",
+    "commitmsg": "commitlint -e",
+    "prepush": "gulp lint && gulp test"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,21 @@
   },
   "homepage": "https://github.com/mishapateyuk/server_for_2048_game#readme",
   "dependencies": {
+    "express": "^4.16.2",
+    "express-joi-validator": "^2.0.0"
+  },
+  "devDependencies": {
     "@commitlint/cli": "^4.2.0",
     "@commitlint/config-angular": "^4.2.0",
     "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-istanbul": "^1.1.2",
+    "gulp-jasmine": "^2.4.2",
+    "gulp-plumber": "^1.1.0",
     "husky": "^0.14.3"
   }
 }

@@ -9,7 +9,7 @@ const app = express();
 app.set('domain', config.get('app.host'));
 app.set('port', config.get('app.port'));
 
-require('./bootstrap/express-default')(app);
+require('./bootstrap/default-middlewares')(app);
 require('./bootstrap/components')(config, app);
 
 if (config.get('app.ssl.enabled')) {

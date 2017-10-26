@@ -8,6 +8,10 @@ const config = {
       key: '',
       cert:'',
     },
+  },
+  'error-log': {
+    'log-to-console': true,
+    'log-to-browser-detailed': true,
   }
 };
 

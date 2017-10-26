@@ -7,7 +7,7 @@
     "start": "node index.js",
     "lint": "gulp lint",
     "dev": "nodemon index.js",
-    "test": "gulp test",
+    "test": "gulp lint && gulp test",
     "commitmsg": "commitlint -e",
     "prepush": "gulp lint && gulp test"
   },
@@ -24,7 +24,9 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "express-joi-validator": "^2.0.0"
+    "express-joi-validator": "^2.0.0",
+    "standard-http-error": "^2.0.1",
+    "winston": "^2.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^4.2.0",
